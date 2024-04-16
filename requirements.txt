@@ -5,3 +5,6 @@ matplotlib
 numba
 tqdm
 sigpy
+cupy
+ipywidgets
+PyQt6
