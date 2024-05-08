@@ -11,3 +11,8 @@ Impressions:
 - Overall, the performance of the package is decent but I can see scalability issues when reconstructing massive datasets like fMRI data.
 - Guanhua says to just use BART instead for sensivity map estimation.
 - Yongli said the sensitivity map estimation in SigPy worked better than the BART implementation for his project on calculating g-factor.
+
+To run scripts in this library:
+1. Clone the repo
+2. Start a Python virtual environment and install the packages listed [here](requirements.txt)
+3. Run! but make sure the file pathes and GPU IDs are valid for your machine
