@@ -1,20 +1,13 @@
-# SigPy for MRI Tutorial
+# Rex's modifications made to the SigPy MRI tutorial
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mikgroup/sigpy-mri-tutorial/master)
+This repo is basically a forked-and-modded version of the original SigPy MRI tutorial [repo](https://github.com/mikgroup/sigpy-mri-tutorial).
 
-In this tutorial, you will learn how to use [SigPy](https://github.com/mikgroup/sigpy) for MRI reconstruction.
+The new notebooks are:
+- [02a](02a.ipynb): Modified from 02-parallel-imaging. Includes 2D and 3D reconstructions of 100x100x100 GRE brain data orginally acquired for the purpose of sensitiviy map estimation
+- [02b_mprage](02b_mprage.ipynb): Modified from 02a. Includes 3D reconstruciton of 256x256x192 MP-RAGE brain data. Main purpose was to test how the package performs at scale.
+- [03a](03a.ipynb): Modified from 03-building-an-l1-wavelet-reocn-app. Supposed to be for imlementing low-rank constrained reconstruction. TODO!
 
-There are three parts of the tutorial:
-
-1. [Gridding Reconstruction](01-gridding-reconstruction.ipynb): This notebook goes through basic features of SigPy using the gridding reconstruction as an example usage.
-2. [Parallel Imaging Compressed Sensing Reconstruction](02-parallel-imaging-compressed-sensing-reconstruction.ipynb): This notebook shows how to run Apps in SigPy to perform parallel imaging compressed sensing reconstructions.
-3. [Buiding a Parallel Imaging Compressed Sensing App](03-building-an-l1-wavelet-recon-app.ipynb): This notebook shows how to create an L1 wavelet regularized reconstruction App from scratch.
-
-
-Some topics that are not covered in this tutorial:
-
-- Non-Cartesian support in MRI Apps.
-- MRI simulation functions, such as generating Poisson disk sampling using `poisson`.
-- Plotting functions.
-- Multi-CPU and GPUs using MPI.
-- PyTorch interopability.
+Impressions:
+- Overall, the performance of the package is decent but I can see scalability issues when reconstructing massive datasets like fMRI data.
+- Guanhua says to just use BART instead for sensivity map estimation.
+- Yongli said the sensitivity map estimation in SigPy worked better than the BART implementation for his project on calculating g-factor.
