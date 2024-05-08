@@ -6,10 +6,10 @@ Input arguments:
 img: 3D volume of brain (3d array)
 title: a title for the image volume (str)
 '''
-def mid3views(img, title):
+def mid3views(img, title, cmap='gray'):
     # axial
     plt.figure()
-    plt.imshow(img[round(img.shape[0]/2),:,:], cmap='gray', origin='lower')
+    plt.imshow(img[round(img.shape[0]/2),:,:],cmap=cmap,origin='lower')
     plt.title(title)
     plt.xlabel('x')
     plt.ylabel('y')
@@ -17,7 +17,7 @@ def mid3views(img, title):
 
     # coronal
     plt.figure()
-    plt.imshow(img[:,round(img.shape[1]/2),:], cmap='gray', origin='lower')
+    plt.imshow(img[:,round(img.shape[1]/2),:],cmap=cmap,origin='lower')
     plt.title(title)
     plt.xlabel('x')
     plt.ylabel('z')
@@ -25,7 +25,7 @@ def mid3views(img, title):
 
     # sagittal
     plt.figure()
-    plt.imshow(img[:,:,round(img.shape[2]/2)], cmap='gray', origin='lower')
+    plt.imshow(img[:,:,round(img.shape[2]/2)],cmap=cmap,origin='lower')
     plt.title(title)
     plt.xlabel('y')
     plt.ylabel('z')
