@@ -8,3 +8,6 @@ sigpy
 cupy
 ipywidgets
 PyQt6
+h5py
+torch
+importlib
